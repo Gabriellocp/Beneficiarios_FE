@@ -1,7 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom'
+import React from 'react'
+import { createRoot } from 'react-dom/client'
 import './global.scss'
-ReactDOM.render(
-    <h1>Hello World!</h1>,
-    document.getElementById('root')
-)
+import Loader from './components/Loader'
+
+const domNode = document.getElementById('root')
+const root = createRoot(domNode)
+
+root.render(<Loader />)

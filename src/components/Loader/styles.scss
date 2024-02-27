@@ -1,0 +1,55 @@
+@import '../../assets/theme/default.scss';
+$dot-size: 30px;
+$animation-duration: .8s;
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    .loader {
+        display: flex;
+        flex-direction: row;
+
+        .dot {
+            align-self: center;
+
+            & {
+                margin-left: 24px;
+            }
+
+            background-color: $primary;
+            width: $dot-size;
+            height: $dot-size;
+            border-radius: 50%;
+            animation: animate $animation-duration ease-out infinite;
+
+            @for $i from 1 through 4 {
+
+                &:nth-child(#{$i}) {
+                    animation-delay: calc(($i - 1) * 0.15 * $animation-duration);
+                }
+            }
+        }
+
+
+
+
+
+
+
+    }
+
+
+}
+
+
+@keyframes animate {
+    25% {
+        transform: translateY(- 10px);
+        // width: calc($dot-size*.8);
+        // height: calc($dot-size*.8);
+    }
+}
