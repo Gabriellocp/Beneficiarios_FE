@@ -1,0 +1,36 @@
+@import "../../assets/theme/default.scss";
+
+@mixin modalDecoration($attr, $color) {
+    &[data-decoration=#{$attr}] {
+        background-color: $color;
+    }
+}
+
+.modal {
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    background-color: $background;
+
+    .title {
+        margin: -8px -12px 0px -12px;
+        padding: 8px 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        @include modalDecoration("default", $primary );
+        @include modalDecoration("danger", $danger)
+    }
+
+    .content {
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
