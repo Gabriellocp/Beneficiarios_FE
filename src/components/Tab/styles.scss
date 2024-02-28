@@ -1,0 +1,41 @@
+@import "../../assets/theme/default.scss";
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 32px;
+
+    .headerItem {
+        font-size: 18px;
+        font-weight: bolder;
+        cursor: pointer;
+
+        &::selection {
+            text-decoration: none;
+        }
+
+        &+.headerItem {
+            margin-left: 12px;
+
+            &::before {
+                content: '|';
+                margin-right: 12px;
+                color: $text !important;
+            }
+        }
+
+        &:hover {
+            color: $primary
+        }
+
+        &[data-active=true] {
+            color: $secondary;
+        }
+    }
+}
+
+.content {
+    margin: 32px 16px;
+    max-width: 500px;
+}
