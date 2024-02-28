@@ -1,9 +1,9 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import './global.scss'
-import Loader from './components/Loader'
+import Input from './components/Input'
 
 const domNode = document.getElementById('root')
 const root = createRoot(domNode)
 
-root.render(<Loader />)
+root.render(<Input placeholder='Name' />)
