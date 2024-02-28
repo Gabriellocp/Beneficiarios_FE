@@ -5,7 +5,7 @@ import Button from '../Button'
 import Overlay from '../Overlay'
 export default function Modal({ confirmLabel, cancelLabel, onConfirm, onCancel, title, content, type }) {
     return (
-        <Overlay>
+        <Overlay id="modal">
             <div className={styles.modal}>
                 <h1 className={styles.title} data-decoration={type}>
                     {title}
