@@ -13,5 +13,9 @@
 
     .list {
         margin-top: 32px;
+
+        &:last-child {
+            margin-bottom: 32px;
+        }
     }
 }
