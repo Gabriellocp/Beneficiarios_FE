@@ -1,0 +1,30 @@
+@import '../../assets/theme/default.scss';
+
+.container {
+    border-radius: 8px;
+    padding: 12px 24px;
+    display: flex;
+    max-width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 4px;
+
+    .memberInfo {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 18px;
+        font-weight: bold;
+
+        .relationship {
+            padding: 2px 8px;
+            text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 100px;
+            background-color: $primary;
+        }
+
+
+    }
+}
