@@ -1,11 +1,13 @@
 @import "../../assets/theme/default.scss";
-$border-thickness: 1.5px;
+$border-thickness: 3px;
 
 .input {
-    border-radius: 12px;
+    border-radius: 16px;
     width: 100%;
-    padding: 4px 8px;
+    padding: 8px 16px;
     border: $border-thickness solid transparent;
+    font-size: 24px;
+    box-shadow: .1px 1px 4px;
 
     &:hover,
     &:focus {
