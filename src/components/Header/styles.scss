@@ -1,0 +1,39 @@
+@import '../../assets/theme/default.scss';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: $secondary;
+    min-height: 50px;
+    align-items: center;
+    padding: 12px 24px;
+    // justify-content: space-between;
+
+    a {
+        cursor: pointer;
+        font-size: 28px;
+        user-select: none;
+
+        &:hover {
+            color: rgba($color: black, $alpha: .7);
+        }
+    }
+
+
+
+
+    .middle {
+        margin: auto;
+
+        a+a {
+            margin-left: 12px;
+
+            &:before {
+                content: '|';
+                cursor: default;
+                color: $text !important;
+                margin-right: 12px;
+            }
+        }
+    }
+}
