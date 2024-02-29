@@ -9,11 +9,26 @@ $border-thickness: 3px;
     font-size: 24px;
     box-shadow: .1px 1px 4px;
 
-    &:hover,
-    &:focus {
+    &:hover {
         border: $border-thickness solid $primary !important;
         outline: none;
     }
 
+    &:focus {
+        border: $border-thickness solid $secondary !important;
+        outline: none;
+    }
 
+    &[data-error=true] {
+        border: $border-thickness solid $danger !important;
+    }
+
+
+}
+
+.errorHint {
+    font-size: 16px;
+    color: $danger;
+    font-weight: bolder;
+    margin: 16px 8px;
 }
