@@ -32,25 +32,23 @@ export default function BeneficiaryForm() {
         // TODO: do something when isValid
     }
     return (
-        <div className={styles.container}>
-            <form className={styles.form} onSubmit={handleSubmitForm}>
-                <Input placeholder='Nome' error={errors.nome} onChange={(value) => handleFieldChange('nome', value)} />
-                <Input placeholder='Idade' error={errors.idade} onChange={(value) => handleFieldChange('idade', value)} />
-                <Input placeholder='CPF' error={errors.cpf} onChange={(value) => handleFieldChange('cpf', value)} />
-                <Input placeholder='RG' error={errors.rg} onChange={(value) => handleFieldChange('rg', value)} />
-                <Input placeholder='Data de Nascimento' error={errors.dataDeNascimento} onChange={(value) => handleFieldChange('dataDeNascimento', value)} />
-                <Input placeholder='Observações' error={errors.observacoes} onChange={(value) => handleFieldChange('observacoes', value)} />
-                <Input placeholder='Qtd. Cestas' error={errors.quantidadeDeCestas} onChange={(value) => handleFieldChange('quantidadeDeCestas', value)} />
-                <Input placeholder='CEP' error={errors.cep} onChange={(value) => handleFieldChange('cep', value)} />
-                <Input placeholder='Endereço' error={errors.endereco} onChange={(value) => handleFieldChange('endereco', value)} />
-                <Input placeholder='Número' error={errors.numero} onChange={(value) => handleFieldChange('numero', value)} />
-                <div className={styles.actions}>
-                    <Button decoration='secondary'> Cancelar </Button>
-                    <Button type='submit'>
-                        Salvar
-                    </Button>
-                </div>
-            </form>
-        </div>
+        <form className={styles.form} onSubmit={handleSubmitForm}>
+            <Input placeholder='Nome' error={errors.nome} onChange={(value) => handleFieldChange('nome', value)} />
+            <Input placeholder='Idade' error={errors.idade} onChange={(value) => handleFieldChange('idade', value)} />
+            <Input placeholder='CPF' error={errors.cpf} onChange={(value) => handleFieldChange('cpf', value)} />
+            <Input placeholder='RG' error={errors.rg} onChange={(value) => handleFieldChange('rg', value)} />
+            <Input placeholder='Data de Nascimento' error={errors.dataDeNascimento} onChange={(value) => handleFieldChange('dataDeNascimento', value)} />
+            <Input placeholder='Observações' error={errors.observacoes} onChange={(value) => handleFieldChange('observacoes', value)} />
+            <Input placeholder='Qtd. Cestas' error={errors.quantidadeDeCestas} onChange={(value) => handleFieldChange('quantidadeDeCestas', value)} />
+            <Input placeholder='CEP' error={errors.cep} onChange={(value) => handleFieldChange('cep', value)} />
+            <Input placeholder='Endereço' error={errors.endereco} onChange={(value) => handleFieldChange('endereco', value)} />
+            <Input placeholder='Número' error={errors.numero} onChange={(value) => handleFieldChange('numero', value)} />
+            <div className={styles.actions}>
+                <Button decoration='secondary'> Cancelar </Button>
+                <Button type='submit'>
+                    Salvar
+                </Button>
+            </div>
+        </form>
     )
 }

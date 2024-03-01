@@ -1,17 +1,10 @@
-.container {
+.form {
     display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-    justify-content: center;
-
-    .form {
+    .actions {
         display: flex;
-        flex-direction: column;
-        gap: 8px;
-        width: 80%;
-
-        .actions {
-            display: flex;
-            justify-content: space-around;
-        }
+        justify-content: space-around;
     }
 }
