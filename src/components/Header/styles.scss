@@ -7,7 +7,8 @@
     min-height: 50px;
     align-items: center;
     padding: 12px 24px;
-    // justify-content: space-between;
+    justify-content: center;
+    position: relative;
 
     a {
         cursor: pointer;
@@ -19,11 +20,13 @@
         }
     }
 
-
+    .right {
+        position: absolute;
+        left: 24px;
+    }
 
 
     .middle {
-        margin: auto;
 
         a+a {
             margin-left: 12px;

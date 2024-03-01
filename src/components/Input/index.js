@@ -7,7 +7,7 @@ export default function Input({ placeholder, onChange, error }) {
         onChange(value)
     }
     return (
-        <>
+        <div>
             <input
                 className={styles.input}
                 placeholder={placeholder}
@@ -15,7 +15,7 @@ export default function Input({ placeholder, onChange, error }) {
                 data-error={!!error}
             />
             {error && <span className={styles.errorHint}>{error}</span>}
-        </>
+        </div>
     )
 }
 

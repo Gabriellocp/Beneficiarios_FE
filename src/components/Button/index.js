@@ -17,10 +17,11 @@ export default function Button({ children, onClick, decoration, type }) {
 Button.propTypes = {
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired,
-    type: PropTypes.string.isRequired,
+    type: PropTypes.string,
     decoration: PropTypes.oneOf(['default', 'secondary', 'danger'])
 }
 
 Button.defaultProps = {
+    type: 'button',
     decoration: 'default'
 }
