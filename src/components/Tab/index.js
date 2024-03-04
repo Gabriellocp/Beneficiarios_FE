@@ -12,7 +12,7 @@ export default function Tab({ headers, children }) {
         setActiveIndex(index)
     }
     return (
-        <div>
+        <div className={styles.container}>
             <div className={styles.header}>
                 {
                     headers.map((header, index) => (
@@ -30,7 +30,7 @@ export default function Tab({ headers, children }) {
             <div className={styles.content}>
                 {children?.map((child, index) => {
                     if (index !== activeIndex) return null
-                    return (<div key={child}> {child}</div>)
+                    return (<React.Fragment key={child}> {child}</React.Fragment>)
                 })}
             </div>
         </div>

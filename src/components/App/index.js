@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../Header'
 import styles from './styles.scss'
-import NewBeneficiary from '@/pages/NewBeneficiary'
 import { ToastNotificationManager } from '@/components/Toast'
+import UpdateBeneficiary from '@/pages/UpdateBeneficiary'
 
 export default function App() {
     return (
@@ -10,7 +10,7 @@ export default function App() {
             <ToastNotificationManager />
             <Header />
             <div className={styles.container}>
-                <NewBeneficiary />
+                <UpdateBeneficiary />
             </div>
         </>
     )

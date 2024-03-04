@@ -1,41 +1,44 @@
 @import "../../assets/theme/default.scss";
 
+.container {
+    width: 100%;
 
-.header {
-    display: flex;
-    flex-direction: row;
-    margin: 12px 32px;
+    .header {
+        display: flex;
+        flex-direction: row;
+        margin: 12px 32px;
+        justify-content: flex-start;
 
-    .headerItem {
-        font-size: 18px;
-        font-weight: bolder;
-        cursor: pointer;
+        .headerItem {
+            font-size: 18px;
+            font-weight: bolder;
+            cursor: pointer;
 
-        &::selection {
-            text-decoration: none;
-        }
+            &::selection {
+                text-decoration: none;
+            }
 
-        &+.headerItem {
-            margin-left: 12px;
+            &+.headerItem {
+                margin-left: 12px;
 
-            &::before {
-                content: '|';
-                margin-right: 12px;
-                color: $text !important;
+                &::before {
+                    content: '|';
+                    margin-right: 12px;
+                    color: $text !important;
+                }
+            }
+
+            &:hover {
+                color: $primary
+            }
+
+            &[data-active=true] {
+                color: $secondary;
             }
         }
-
-        &:hover {
-            color: $primary
-        }
-
-        &[data-active=true] {
-            color: $secondary;
-        }
     }
-}
 
-.content {
-    margin: 32px 16px;
-    max-width: 500px;
+    .content {
+        margin: 32px 16px;
+    }
 }
