@@ -1,0 +1,49 @@
+@import '../../assets/theme/default.scss';
+
+.container {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+
+    .divider {
+        margin: 0px 8px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .item {
+        cursor: pointer;
+        font-weight: 800;
+        padding: 4px;
+        width: 48px;
+        border-radius: 8px;
+        text-align: center;
+
+        &+.item {
+            margin-left: 24px;
+        }
+
+        &:hover,
+        &[data-active=true] {
+            color: $background;
+            background-color: $primary;
+        }
+    }
+
+    .controls {
+        cursor: pointer;
+        margin: 0px 12px;
+
+        width: 20px;
+        height: 20px;
+
+        &:nth-last-child(1) {
+            transform: rotateZ(180deg);
+        }
+
+        &:active {
+            opacity: .7;
+        }
+    }
+}

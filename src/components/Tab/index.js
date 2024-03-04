@@ -30,7 +30,7 @@ export default function Tab({ headers, children }) {
             <div className={styles.content}>
                 {children?.map((child, index) => {
                     if (index !== activeIndex) return null
-                    return (<React.Fragment key={child}> {child}</React.Fragment>)
+                    return (<React.Fragment key={headers[index]}>{child}</React.Fragment>)
                 })}
             </div>
         </div>
