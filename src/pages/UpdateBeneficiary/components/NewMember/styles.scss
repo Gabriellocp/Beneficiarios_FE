@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    button {
+        align-self: flex-end;
+        margin-bottom: 12px;
+    }
+
+    .item {
+        width: inherit;
+
+        &+.item {
+            margin-top: 12px;
+        }
+    }
+}
