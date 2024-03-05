@@ -3,7 +3,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    background-color: $secondary;
+    background-color: $primary;
     min-height: 50px;
     align-items: center;
     padding: 12px 24px;
@@ -15,9 +15,10 @@
         font-size: 28px;
         text-decoration: none;
         user-select: none;
+        color: $background;
 
         &:hover {
-            color: rgba($color: black, $alpha: .7);
+            color: rgba($color: $background, $alpha: .7);
         }
     }
 
@@ -35,7 +36,7 @@
             &:before {
                 content: '|';
                 cursor: default;
-                color: $text !important;
+                color: $background !important;
                 margin-right: 12px;
             }
         }

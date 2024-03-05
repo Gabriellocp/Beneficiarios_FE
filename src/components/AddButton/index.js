@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import Button from '../Button'
 export default function AddButton({ label, onClick }) {
     return (
-        <Button onClick={onClick} decoration='secondary'>
+        <Button onClick={onClick} >
             <img width={20} src={add} alt="adicionar" />
             <span className={styles.label}>{label}</span>
         </Button>

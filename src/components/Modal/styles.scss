@@ -13,15 +13,16 @@
     max-width: 500px;
     padding: 12px 24px;
     box-sizing: border-box;
-    background-color: $background;
+    background-color: #FFFFFF;
 
     .title {
         margin: -12px -24px 0px -24px;
         padding: 12px 24px;
         font-weight: 800;
         text-transform: uppercase;
-        @include modalDecoration("default", $primary );
-        @include modalDecoration("danger", $danger)
+        @include modalDecoration('danger', $danger);
+        @include modalDecoration('default', $secondary);
+        color: $background;
     }
 
     .content {
