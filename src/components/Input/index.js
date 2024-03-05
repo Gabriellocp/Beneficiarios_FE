@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.scss'
 import PropTypes from 'prop-types'
-export default function Input({ placeholder, onChange, error }) {
+export default function Input({ placeholder, onChange, error, type }) {
     const handleInputChange = (e) => {
         const { value } = e.target
         onChange(value)
@@ -13,6 +13,7 @@ export default function Input({ placeholder, onChange, error }) {
                 placeholder={placeholder}
                 onChange={handleInputChange}
                 data-error={!!error}
+                type={type}
             />
             {error && <span className={styles.errorHint}>{error}</span>}
         </div>
@@ -22,9 +23,11 @@ export default function Input({ placeholder, onChange, error }) {
 Input.propTypes = {
     placeholder: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    error: PropTypes.string
+    error: PropTypes.string,
+    type: PropTypes.string
 }
 
 Input.defaultProps = {
-    error: ''
+    error: '',
+    type: 'text'
 }
