@@ -3,19 +3,29 @@ import styles from './styles.scss'
 import PropTypes from 'prop-types'
 import Button from '../Button'
 import Overlay from '../Overlay'
-export default function Modal({ confirmLabel, cancelLabel, onConfirm, onCancel, title, content, type }) {
+export default function Modal({
+    confirmLabel,
+    cancelLabel,
+    onConfirm,
+    onCancel,
+    title,
+    content,
+    type,
+    isVisible
+}) {
+    if (!isVisible) return null
     return (
         <Overlay id="modal">
             <div className={styles.modal}>
-                <h1 className={styles.title} data-decoration={type}>
+                <h2 className={styles.title} data-decoration={type}>
                     {title}
-                </h1>
-                <div className={styles.content}>
+                </h2>
+                <h3 className={styles.content}>
                     {content}
-                </div>
+                </h3>
                 <div className={styles.actions}>
-                    <Button type="secondary" onClick={onCancel} >{cancelLabel}</Button>
-                    <Button type={type} onClick={onConfirm}>{confirmLabel}</Button>
+                    <Button decoration="secondary" onClick={onCancel} >{cancelLabel}</Button>
+                    <Button decoration={type} onClick={onConfirm}>{confirmLabel}</Button>
                 </div>
             </div>
         </Overlay>
@@ -26,14 +36,16 @@ Modal.propTypes = {
     confirmLabel: PropTypes.string.isRequired,
     cancelLabel: PropTypes.string.isRequired,
     onConfirm: PropTypes.func.isRequired,
-    onCancel: PropTypes.func.isRequired,
     title: PropTypes.node.isRequired,
     content: PropTypes.node.isRequired,
-    type: PropTypes.oneOf(['default', 'danger'])
+    type: PropTypes.oneOf(['default', 'danger']),
+    onCancel: PropTypes.func,
+    isVisible: PropTypes.bool
 }
 
 Modal.defaultProps = {
     cancelLabel: 'Cancelar',
     onCancel: null,
-    type: 'default'
+    type: 'default',
+    isVisible: false
 }

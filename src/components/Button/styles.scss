@@ -26,13 +26,14 @@
     border: none;
     padding: 8px 16px;
     font-size: 18px;
-    min-width: 80px;
+    min-width: 150px;
+    max-width: 150px;
     cursor: pointer;
-    box-shadow: 1px 2px 2px;
-
-
-
+    box-shadow: $text 1px 2px 2px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $background;
     @include buttonDecoration("default", $primary);
     @include buttonDecoration("secondary", $secondary-light);
-    @include buttonDecoration("danger", $danger)
+    @include buttonDecoration("danger", $danger);
 }

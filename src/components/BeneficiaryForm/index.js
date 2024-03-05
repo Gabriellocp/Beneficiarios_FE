@@ -5,6 +5,7 @@ import InputCompositeValidator from '@/validation/InputValidation/InputComposite
 import InputValidationBuilder from '@/validation/InputValidation/InputValidationBuilder'
 import Button from '../Button'
 import useForm from '@/hooks/useForm'
+import PropTypes from 'prop-types'
 const validators = new InputCompositeValidator([
     ...InputValidationBuilder.create('nome').email().required().build(),
     ...InputValidationBuilder.create('idade').required().build(),
@@ -12,7 +13,7 @@ const validators = new InputCompositeValidator([
     ...InputValidationBuilder.create('rg').required().build()
 ])
 // TODO: receive validators as props
-export default function BeneficiaryForm() {
+export default function BeneficiaryForm({ onCancel, onSubmit }) {
     const { handleFieldChange, errors } = useForm({
         nome: '',
         idade: '',
@@ -28,6 +29,7 @@ export default function BeneficiaryForm() {
 
     const handleSubmitForm = (e) => {
         e.preventDefault()
+        onSubmit()
         // const isValid = handleSubmit()
         // TODO: do something when isValid
     }
@@ -44,11 +46,16 @@ export default function BeneficiaryForm() {
             <Input placeholder='Endereço' error={errors.endereco} onChange={(value) => handleFieldChange('endereco', value)} />
             <Input placeholder='Número' error={errors.numero} onChange={(value) => handleFieldChange('numero', value)} />
             <div className={styles.actions}>
-                <Button decoration='secondary'> Cancelar </Button>
+                <Button decoration='secondary' onClick={onCancel}> Cancelar </Button>
                 <Button type='submit'>
                     Salvar
                 </Button>
             </div>
         </form>
     )
+}
+
+BeneficiaryForm.propTypes = {
+    onCancel: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired
 }

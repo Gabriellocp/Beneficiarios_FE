@@ -9,14 +9,15 @@
 .modal {
     border-radius: 8px;
     overflow: hidden;
-    max-width: 600px;
-    padding: 8px 12px;
+    min-width: 500px;
+    max-width: 500px;
+    padding: 12px 24px;
     box-sizing: border-box;
     background-color: $background;
 
     .title {
-        margin: -8px -12px 0px -12px;
-        padding: 8px 12px;
+        margin: -12px -24px 0px -24px;
+        padding: 12px 24px;
         font-weight: 800;
         text-transform: uppercase;
         @include modalDecoration("default", $primary );
