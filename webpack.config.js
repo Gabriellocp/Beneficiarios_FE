@@ -40,6 +40,7 @@ module.exports = {
         new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') })
     ],
     devServer: {
-        port: 3002
+        port: 3002,
+        historyApiFallback: true
     }
 }
